@@ -1,0 +1,57 @@
+.top {
+	background: $red;
+	color: white; 
+	height: 4em;
+	a {
+		color: white;
+	}
+}
+
+.top__indicator {
+	float: left;
+	width: 4%;
+	height: 4em;
+	border-right: 1px solid white;
+
+	a {
+		line-height: 4em;
+		display: block;
+		text-align: center;
+	}
+}
+
+.top__logo {
+	float: left;
+	@include box-sizing(border-box);
+	width: 16%;
+	height: 4em;
+	border-right: 1px solid white;
+
+	a {
+		display: block;
+		line-height: 4em;
+		text-align: center;
+	}
+
+	svg {
+		display: block;
+		width: 80%;
+		margin: 1.2em auto 0;
+	}
+}
+
+.top__user {
+	height: 3em;
+	padding: 0.5em 0.6em 0 0;
+	text-align: right;
+	font-size: .9em;
+	width: 100%;
+
+	.media {
+		float: right;
+
+		.media__img {
+			margin: 0 10px 0 20px !important;
+		}
+	}
+}

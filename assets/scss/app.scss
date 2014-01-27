@@ -1,0 +1,40 @@
+/**
+ * Variables
+ */
+
+$red: #DE004B;
+$grey: #F3F3F3;
+
+/**
+ * Imports
+ */
+
+@import "bourbon",
+		"components/top",
+		"components/nav",
+		"components/body",
+		"components/widgets",
+		"components/media";
+
+
+/**
+ * Sensible defaults
+ */
+
+html,body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	font: {
+		family: 'proxima-nova','Helvetica', sans-serif;
+	}
+}
+
+img {
+	display: block;
+	width: auto; height: auto;
+	max-width: 100%;
+}

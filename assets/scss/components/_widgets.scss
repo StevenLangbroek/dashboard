@@ -1,0 +1,177 @@
+.widgets {
+	width: 95%;
+	margin: 0 0 1em 0;
+	@include clearfix;
+	overflow-x: hidden;
+}
+
+.widget__body {
+	border-style: solid;
+	border-color: #D3D3D3;
+	border-width: 0 2px 2px 2px;
+	background: white;
+}
+
+.widget {
+	@include box-sizing(border-box);
+	padding: 0 .5em;
+	width: 25%;
+	float: left;
+}
+
+.widget--two-thirds {
+	width: 66.6%;
+}
+
+.widget--news {
+	width: 33.3%;
+}
+
+.widget__header {
+	background: #E6E6E6;
+	line-height: 2em;
+	padding: .4em 1em;
+
+	.fa {
+		margin-right: 1em;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 1.2em;
+		color: #484848;
+	}
+}
+
+h1 {
+	margin-top: 0;
+}
+
+.widget__graph {
+	background: $red;
+	color: white;
+	padding: 1em;
+	overflow: hidden;
+
+	.widget--revenue & {
+		background: #58B38D;
+	}
+
+	.widget--fills & {
+		background: #FF8F33;
+	}
+
+	.widget--clicks & {
+		background: #3888C6;
+	}
+
+	.widget--conversions & {
+		background: #DD3856;
+	}
+}
+
+.graph__desc {
+	text-transform: uppercase;
+	margin-top: 0;
+	font-weight: normal;
+	font-size: .8em;
+}
+
+.graph__value {
+	float: right;
+	font-size: 1.4em;
+}
+
+
+.graph__time {
+	display: block;
+	font-size: 0.8em;
+	margin-bottom: .3em;
+}
+
+.graph__diff {
+	display: block;
+	text-align: right;
+	font-size: .8em;
+	margin-bottom: .5em;
+}
+
+.widget__body {
+	@include clearfix;
+}
+
+.widget__body-container {
+	padding: 1em;
+}
+
+.big-chart {
+	height: 21em;
+}
+
+.stats__block {
+	@include box-sizing(border-box);
+	width: 50%;
+	float: left;
+	height: 4em;
+	background: white;
+	border-style: solid;
+	border-color: #D3D3D3;
+	padding: .5em 1em;
+
+	&.top-left {
+		border-width: 0 1px 1px 0;
+	}
+	&.top-right {
+		border-width: 0 0 1px 0;
+	}
+	&.bottom-left {
+		border-width: 0 1px 0 0;
+	}
+	&.bottom-right {
+		border-width: 0;
+	}
+
+	&.bottom-full {
+		width: 100%;
+		border-width: 0;
+	}
+}
+
+.stats__plus {
+	color: #555;
+	font-weight: bold;
+}
+
+.stats__type {
+	font-size: .9em;
+	color: #9C9C9C;
+	line-height: 1em;
+	small {
+		display: block;
+		margin-top: -.2em;
+	}
+}
+
+.graph {
+	height: 3em;
+	width: 125%;
+}
+
+/**
+ * News
+ */
+
+.news_item__header {
+	font-size: 1em;
+	margin: 0;
+	color: $red;
+}
+
+.news_item__body {
+	border-bottom: 1px solid #D3D3D3;
+	margin-bottom: 1em;
+	p {
+		margin-top: 0;
+		font-size: .9em;
+	}
+}

@@ -1,0 +1,22 @@
+.media {
+	display: table;
+
+	p {
+		margin: 0;
+	}
+
+	.media__body {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.media__img {
+		display: table-cell;
+		width: 50px;
+		margin: 0 20px 0 0;
+	}
+
+	&.media--rev .media__img {
+		margin: 0 0 0 20px;
+	}
+}
