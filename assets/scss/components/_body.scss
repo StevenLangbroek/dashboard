@@ -1,11 +1,33 @@
 .body__content {
 	float: left;
 	width: 80%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background: #f3f3f3;
+	@include box-shadow(0 0 7px rgba(0,0,0,.6));
+	@include transition(all .4s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+
+	@include breakpoint(portrait) {
+		width: 100%;
+		position: absolute;
+		left: 0; top: 0;
+		z-index: 3;
+		@include transform(translate3d(0,0,0));
+	}
+	@include breakpoint(landscape) {
+		width: 100%;
+		position: absolute;
+		left: 0; top: 0;
+		z-index: 3;
+		@include transform(translate3d(0,0,0));
+	}
 }
 
 .app {
 	position: relative;
 	width: 100%;
+	@include clearfix;
 }
 
 .app__bar {
@@ -27,6 +49,7 @@
 }
 
 .viewport {
-	padding: 1.5em 2em;
+	padding: 1.5em 1em;
 	width: 100%;
+	overflow-y: scroll;
 }

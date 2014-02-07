@@ -15,16 +15,43 @@
 .widget {
 	@include box-sizing(border-box);
 	padding: 0 .5em;
-	width: 25%;
 	float: left;
+
+	@include breakpoint(desktop) {
+		width: 25%;
+	}
+
+	@include breakpoint(portrait) {
+		width: 95%;
+	}
+
+	@include breakpoint(landscape) {
+		width: 92%;
+	}
 }
 
 .widget--two-thirds {
 	width: 66.6%;
+	margin-bottom: 1em;
+
+	@include breakpoint(portrait) {
+		display: none;
+	}
+	@include breakpoint(landscape) {
+		width: 100%;
+	}
 }
 
 .widget--news {
 	width: 33.3%;
+
+	@include breakpoint(portrait) {
+		width: 100%;
+	}
+
+	@include breakpoint(landscape) {
+		width: 100%;
+	}
 }
 
 .widget__header {

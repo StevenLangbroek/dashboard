@@ -10,12 +10,13 @@ $grey: #F3F3F3;
  */
 
 @import "bourbon",
+		"components/mixins",
 		"components/top",
 		"components/nav",
 		"components/body",
 		"components/widgets",
 		"components/media";
-
+		
 
 /**
  * Sensible defaults

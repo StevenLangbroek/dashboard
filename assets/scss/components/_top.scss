@@ -2,6 +2,7 @@
 	background: $red;
 	color: white; 
 	height: 4em;
+	position: relative; z-index: 4;
 	a {
 		color: white;
 	}
@@ -12,6 +13,12 @@
 	width: 4%;
 	height: 4em;
 	border-right: 1px solid white;
+	@include breakpoint(portrait) {
+		width: 8%;
+	};
+	@include breakpoint(landscape) {
+		width: 6.25%;
+	};
 
 	a {
 		line-height: 4em;
@@ -27,6 +34,15 @@
 	height: 4em;
 	border-right: 1px solid white;
 
+	@include breakpoint(portrait) {
+		width: 90%;
+		border-right: none;
+	};
+	@include breakpoint(landscape) {
+		width: 90%;
+		border-right: none;
+	};
+
 	a {
 		display: block;
 		line-height: 4em;
@@ -41,6 +57,12 @@
 }
 
 .top__user {
+	@include breakpoint(portrait) {
+		display: none;
+	};
+	@include breakpoint(landscape) {
+		display: none;
+	};
 	height: 3em;
 	padding: 0.5em 0.6em 0 0;
 	text-align: right;

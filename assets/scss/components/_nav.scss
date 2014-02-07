@@ -23,23 +23,56 @@
 		content: ' ';
 	}
 
+	@include breakpoint(portrait) {
+		position: absolute;
+		top: 0; left: 0;
+		width: 60%;
+		z-index: 2;
+
+		&:after {
+			width: 16%
+		}
+	}
+	@include breakpoint(landscape) {
+		position: absolute;
+		top: 0; left: 0;
+		width: 40%;
+		z-index: 2;
+
+		&:after {
+			width: 16%
+		}
+	}
+
 }
 
 .body--nav-collapsed {
-	.body__content {
-		width: 95.95%;
-	}
-	.body__nav {
-		width: 4.05%;
-		border-right: none;
-
-		i {
-			width: 100%;
+	@include breakpoint(desktop) {
+		.body__content {
+			width: 95.95%;
 		}
+		.body__nav {
+			width: 4.05%;
+			border-right: none;
 
-		span {
-			opacity: 0;
-			display: none;
+			i {
+				width: 100%;
+			}
+
+			span {
+				opacity: 0;
+				display: none;
+			}
+		}
+	}
+	@include breakpoint(portrait) {
+		.body__content {
+			@include transform(translate3d(50%, 0, 0));
+		}
+	}
+	@include breakpoint(landscape) {
+		.body__content {
+			@include transform(translate3d(40%, 0, 0));
 		}
 	}
 }

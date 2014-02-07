@@ -15,4 +15,19 @@
 	start: (options = {}) ->
 		google.load "visualization", "1", {packages:["corechart"]}
 		new App.Views.TopView
-		google.setOnLoadCallback(App.drawCharts)
+		google.setOnLoadCallback ->
+
+			App.drawCharts()
+
+			Harvey.attach '(max-width: 1024px)',
+				on: -> 
+					$('.widgets').eq(0).owlCarousel
+						navigation: true
+						pagination: false
+						itemsTablet: [1024, 2]
+						itemsTabletSmall: [768, 1]
+
+					App.vent.trigger 'viewport:change', 'portrait'
+
+				off: ->
+					$('.widgets').eq(0).data('owlCarousel').destroy()

@@ -14,7 +14,10 @@
     WidgetView.prototype.initialize = function(options) {
       this.name = options.name;
       this.data = google.visualization.arrayToDataTable([["Year", "Sales"], ["2002", 600], ["2003", 1400], ["2004", 1000], ["2005", 1170], ["2006", 660], ["2007", 1030], ["2008", 960], ['2009', 1500], ['2010', 750], ['2011', 1200], ['2012', 600], ['2013', 900], ['2014', 1200]]);
-      return this.render();
+      this.render();
+      return this.listenTo(App.vent, 'viewport:change', function(size) {
+        return this.render();
+      });
     };
 
     WidgetView.prototype.render = function() {
